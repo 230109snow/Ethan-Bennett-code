@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h2>Counter</h2>
+        <div id="count">0</div>
+        <button onclick="modifyNum(1)">Increment</button>
+        <button onclick="modifyNum(-1)">Decrement</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <div class="container">
+        <h2>FizzBuzz</h2>
+        <input type="number" name="fizzbuzz-input" id="fizzbuzz-input">
+        <button onclick="fizzbuzz()">Fizzbuzz!</button>
+        <div id="fizzbuzz-output">
+            <!-- a placeholder div to print your output -->
+        </div>
+    </div>
+
+    <div class="calculator">
+        <h2>Calculator</h2>
+        
+        <table>
+            <tr>
+                <div id="expression">
+                    <!-- This is where i'll  output the expression user is entering -->
+                </div>
+            </tr>  
+            <tr>
+                <th><button onclick="calculator(1)">1</button></th>
+                <th><button onclick="calculator(2)">2</button></th>
+                <th><button onclick="calculator(3)">3</button></th>
+                <th><button onclick="calculator('/')">/</button></th>
+            </tr>
+            <tr>
+                <th><button onclick="calculator(4)">4</button></th>
+                <th><button onclick="calculator(5)">5</button></th>
+                <th><button onclick="calculator(6)">6</button></th>
+                <th><button onclick="calculator('*')">*</button></th>
+            </tr>    
+            <tr>
+                <th><button onclick="calculator(7)">7</button></th>
+                <th><button onclick="calculator(8)">8</button></th>
+                <th><button onclick="calculator(9)">9</button></th>
+                <th><button onclick="calculator('-')">-</button></th>                
+            </tr>    
+            <tr>
+                <th></th>
+                <th><button onclick="calculator(0)">0</button></th>
+                <th></th>
+                <th><button onclick="calculator('+')">+</button></th>
+
+            </tr>   
+            <tr>
+                <th><button onclick="calculator('AC')">AC</button></th>
+                <th><button onclick="calculator('=')">=</button></th>
+            </tr>    
+           
+        </table>
+    </div>
+    <script src="events.js"></script>
+</body>
+</html>
