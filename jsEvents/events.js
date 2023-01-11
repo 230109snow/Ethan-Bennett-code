@@ -57,10 +57,10 @@ function calculator(value) {
         opperation = value;
         output.innerText += value;
         justDidCalc = false;
-    }else if(opperation === "" && !isNaN(value)  && !justDidCalc){
+    }else if(opperation === "" && (!isNaN(value) || (value === "." && !num1.includes(".")))  && !justDidCalc){
         num1 += value;
         output.innerText += value; 
-    }else if(!isNaN(value)  && !justDidCalc){
+    }else if(!isNaN(value) || (value === "." && !num2.includes("."))  && !justDidCalc){
         num2 += value;
         output.innerText += value;
     }else if(value === "=" && (num1 !=="" && num2 !=="")){

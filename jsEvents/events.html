@@ -28,44 +28,35 @@
 
     <div class="calculator">
         <h2>Calculator</h2>
-        
-        <table>
-            <tr>
-                <div id="expression">
-                    <!-- This is where i'll  output the expression user is entering -->
-                </div>
-            </tr>  
-            <tr>
-                <th><button onclick="calculator(1)">1</button></th>
-                <th><button onclick="calculator(2)">2</button></th>
-                <th><button onclick="calculator(3)">3</button></th>
-                <th><button onclick="calculator('/')">/</button></th>
-            </tr>
-            <tr>
-                <th><button onclick="calculator(4)">4</button></th>
-                <th><button onclick="calculator(5)">5</button></th>
-                <th><button onclick="calculator(6)">6</button></th>
-                <th><button onclick="calculator('*')">*</button></th>
-            </tr>    
-            <tr>
-                <th><button onclick="calculator(7)">7</button></th>
-                <th><button onclick="calculator(8)">8</button></th>
-                <th><button onclick="calculator(9)">9</button></th>
-                <th><button onclick="calculator('-')">-</button></th>                
-            </tr>    
-            <tr>
-                <th></th>
-                <th><button onclick="calculator(0)">0</button></th>
-                <th></th>
-                <th><button onclick="calculator('+')">+</button></th>
+        <div class="grid-container">
+            <div id="expression">
+                <!-- This is where i'll  output the expression user is entering -->
+            </div>
+            <button onclick="calculator('/')">/</button>   
+            <button onclick="calculator('*')">*</button>
+            <button onclick="calculator('-')">-</button> 
+            <button onclick="calculator('+')">+</button>
 
-            </tr>   
-            <tr>
-                <th><button onclick="calculator('AC')">AC</button></th>
-                <th><button onclick="calculator('=')">=</button></th>
-            </tr>    
-           
-        </table>
+            <button onclick="calculator(1)">1</button>
+            <button onclick="calculator(2)">2</button>
+            <button onclick="calculator(3)">3</button>
+               
+            <button onclick="calculator(4)">4</button>
+            <button onclick="calculator(5)">5</button>
+            <button onclick="calculator(6)">6</button>
+              
+            <button onclick="calculator(7)">7</button>
+            <button onclick="calculator(8)">8</button>
+            <button onclick="calculator(9)">9</button>
+                           
+            <button onclick="calculator(0)" id="zero">0</button>
+            <button onclick="calculator('.')">.</button>
+            <button onclick="calculator('AC')">AC</button>
+
+            <button onclick="calculator('=')" id="equals">=</button>
+        
+            
+        </div>
     </div>
     <script src="events.js"></script>
 </body>
