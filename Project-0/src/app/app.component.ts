@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Project-0';
+
+  data : number[] = [1, 2, 3, 4, 5]
+  show : boolean = true;
+
+  toggleClick() : void {
+    this.show = !this.show;
+  }
 }
