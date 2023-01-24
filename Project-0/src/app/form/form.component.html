@@ -1,0 +1,65 @@
+<div class="form-group">
+    <h3>Select What To Find An Activity By</h3>
+    <label for="findBy">Find By: </label>
+    <select class="form-control" id="findBy"
+            required
+            [(ngModel)]="findByChosenOption" name="findBy"
+            #findBy="ngModel">
+        <option *ngFor="let option of findByOptions" [value]="option">{{option}}</option>
+    </select>
+    <button (click)="showElement()">Submit</button>
+</div>
+
+
+<div class="type-form-group" [hidden]="typeHidden">
+    <label for="typeSelection">Type of Activity: </label>
+    <select class="form-control" id="typeSelection"
+            required
+            [(ngModel)]="chosenOption" name="typeSelection"
+            #typeSelection="ngModel">
+        <option *ngFor="let option of typeOptions" [value]="option">{{option}}</option>
+    </select>
+    <button (click)="getActivityByType(typeSelection)">Submit</button>
+</div>
+
+<form #form="ngForm" (submit)="getActivityWithPercent(form)" [hidden]="priceHidden">
+    <label for="price">Enter price: </label>
+    <input type="number" name="price" id="price" [(ngModel)]="range" #price="ngModel" [required]="validation.required" [min]="validation.min" [max]="validation.max" step="5">
+    <div *ngIf="price.invalid && (price.dirty && price.touched)" class="alert">
+        <div *ngIf="price.errors?.['min']">
+            the min value is 0.
+        </div>
+        <div *ngIf="price.errors?.['max']">
+            the max value is 100.
+        </div>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+<form #form="ngForm" (submit)="getActivity(form)" [hidden]="participantsHidden">
+    <label for="participants">Enter participants: </label>
+    <input type="number" name="participants" id="participants" [(ngModel)]="range" #participants="ngModel" [required]="validation.required" [min]="validation.min" [max]="validation.max">
+    <div *ngIf="participants.invalid && (participants.dirty && participants.touched)" class="alert">
+        <div *ngIf="participants.errors?.['min']">
+            the min value is 0.
+        </div>
+        <div *ngIf="participants.errors?.['max']">
+            the max value is 100.
+        </div>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+<form #form="ngForm" (submit)="getActivityWithPercent(form)" [hidden]="accessibilityHidden">
+    <label for="accessibility">Enter accessibility: </label>
+    <input type="number" name="accessibility" id="accessibility" [(ngModel)]="range" #accessibility="ngModel" [required]="validation.required" [min]="validation.min" [max]="validation.max" step="5">
+    <div *ngIf="accessibility.invalid && (accessibility.dirty && accessibility.touched)" class="alert">
+        <div *ngIf="accessibility.errors?.['min']">
+            the min value is 0.
+        </div>
+        <div *ngIf="accessibility.errors?.['max']">
+            the max value is 100.
+        </div>
+    </div>
+    <input type="submit" value="Submit">
+</form>
