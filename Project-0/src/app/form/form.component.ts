@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BoredApiService } from '../bored-api.service';
 import { Router } from '@angular/router';
-import { ViewChild} from '@angular/core'
+import { DataTransferService } from '../data-transfer.service';
 
 @Component({
   selector: 'app-form',
@@ -9,7 +9,11 @@ import { ViewChild} from '@angular/core'
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  constructor(private boredapi : BoredApiService, private router: Router){}
+  constructor(
+    private boredapi : BoredApiService,
+    private router: Router,
+    private dataTransferService: DataTransferService
+    ){}
   
   inputNum : number = 0;
 
@@ -37,6 +41,9 @@ export class FormComponent {
       
       this.boredapi.getActivity(this.findByChosenOption + "=" + this.range).subscribe((data: any) => {
         console.log(data);
+
+        this.dataTransferService.setData(data);
+        this.router.navigateByUrl('/results');
       })
     }
   }
@@ -47,6 +54,9 @@ export class FormComponent {
 
       this.boredapi.getActivity(this.findByChosenOption + "=" + form.value).subscribe((data: any) => {
         console.log(data);
+
+        this.dataTransferService.setData(data);
+        this.router.navigateByUrl('/results');
       })
     }
   }
@@ -59,6 +69,9 @@ export class FormComponent {
 
       this.boredapi.getActivity(this.findByChosenOption + "=" + fixedNum).subscribe((data: any) => {
         console.log(data);
+
+        this.dataTransferService.setData(data);
+        this.router.navigateByUrl('/results');
       })
     }
   }

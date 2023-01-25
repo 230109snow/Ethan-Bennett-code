@@ -8,13 +8,15 @@ import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    ResultsComponent
+    ResultsComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

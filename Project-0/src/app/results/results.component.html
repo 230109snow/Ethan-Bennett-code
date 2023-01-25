@@ -1,1 +1,18 @@
-<p>results works!</p>
+<h1></h1>
+
+<div class="errorResult" [hidden]="errorHidden">
+    <p>There is no activity found with the specified parameters</p>
+    <p>You can return to the previous page to try again</p>
+</div>
+
+<div class="activityResult" [hidden]="resultHidden">
+    <p>Activity: {{activity}}</p>
+    <p>Type: {{type}}</p>
+    <p>Participants: {{participants}}</p>
+    <p>Price: {{price}}</p>
+    <p>Accessibility: {{accessibility}}</p>
+    <p [hidden]="linkHidden">Link: {{link}}</p>
+</div>
+
+
+<a class="button" routerLink="/forms">Find Another Activity</a>
