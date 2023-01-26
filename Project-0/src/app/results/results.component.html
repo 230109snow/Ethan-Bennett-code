@@ -6,13 +6,23 @@
 </div>
 
 <div class="activityResult" [hidden]="resultHidden">
-    <p>Activity: {{activity}}</p>
-    <p>Type: {{type}}</p>
-    <p>Participants: {{participants}}</p>
-    <p>Price: {{price}}</p>
-    <p>Accessibility: {{accessibility}}</p>
-    <p [hidden]="linkHidden">Link: {{link}}</p>
+    <h3>Activity</h3>
+    <p>{{activity}}</p>
+
+    <h3>Type</h3>
+    <p>{{type}}</p>
+
+    <h3>Participants</h3>
+    <p>{{participants}}</p>
+
+    <h3>Price</h3>
+    <p>{{price}}</p>
+
+    <h3>Accessibility</h3>
+    <p>{{accessibility}}</p>
+    <div class="link" [hidden]="linkHidden">
+        <h3>Link</h3>
+        <a href={{link}}>{{link}}</a>
+    </div>
+    
 </div>
-
-
-<a class="button" routerLink="/forms">Find Another Activity</a>

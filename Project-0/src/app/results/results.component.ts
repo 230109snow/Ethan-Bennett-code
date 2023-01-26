@@ -34,8 +34,8 @@ export class ResultsComponent implements OnInit{
       this.activity = this.data.activity;
       this.type = this.data.type;
       this.participants = this.data.participants;
-      this.price = this.data.price;
-      this.accessibility = this.data.accessibility;
+      this.price = String (this.data.price * 100);
+      this.accessibility = String (this.data.accessibility * 100);
       if(this.data.link !== ""){
         this.link = this.data.link;
         this.linkHidden = false;  

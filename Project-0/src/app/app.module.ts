@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
 import { InfoComponent } from './info/info.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { InfoComponent } from './info/info.component';
     AppComponent,
     FormComponent,
     ResultsComponent,
-    InfoComponent
+    InfoComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
